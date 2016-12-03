@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>keypress</title>
+	<style>
+			
+		input{
+			width: 200px;
+			line-height: 40px;
+			border-radius: 10px;
+			text-indent: 6px;
+			box-shadow: 0 0 4px rgba(0,0,0,.5);
+			background: hsla(200,50%,50%,.5)!important;
+			border: none;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+
+	<input type="text" onKeyPress="return inputNum(event);" > 
+
+	<script language="javascript" type="text/javascript">   
+
+		function inputNum(evt){  
+
+		    evt = (evt) ? evt : ((window.event) ? window.event : "");  
+
+		     var key = evt.keyCode?evt.keyCode:evt.which;
+
+		     if((key<=57) && (key>=48)){   
+
+		         return true;   
+
+		     }else{   
+
+		         alert("只能输入数字！");   
+
+		         return false;   
+
+		     }   
+		}   
+
+	</script> 
+
+</body>
+</html>
