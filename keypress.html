@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>keypress</title>
 	<style>
-			
 		input{
 			width: 200px;
 			line-height: 40px;
@@ -19,9 +18,14 @@
 </head>
 <body>
 
-	<input type="text" onKeyPress="return inputNum(event);" > 
+	<!-- <input type="text" id="Inp" onKeyPress="return inputNum(event);" >  -->
+	<input type="text" id="Inp" > 
 
 	<script language="javascript" type="text/javascript">   
+		var Inp = document.getElementById('Inp'); 
+		Inp.onKeyPress=function(event){
+			return inputNum(event);
+		};
 
 		function inputNum(evt){  
 
@@ -40,9 +44,12 @@
 		         return false;   
 
 		     }   
-		}   
+		} 
+
+
 
 	</script> 
+
 
 </body>
 </html>
